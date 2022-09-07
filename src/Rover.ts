@@ -1,7 +1,14 @@
-export class Rover {
-  constructor(x: number, y: number) {}
+import { Orientation } from "./Orientation";
+import { Position } from "./Position";
 
-  displayPosition(): [number, number, string] {
-    return [0, 0, "N"];
+export class Rover {
+  private position: Position;
+
+  constructor(x: number, y: number) {
+    this.position = { x: x, y: y, orientation: Orientation.N };
+  }
+
+  displayPosition(): Position {
+    return this.position;
   }
 }
