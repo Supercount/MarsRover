@@ -2,3 +2,5 @@
 **/*.js
 **/*.spec.js
 **/*.js.map
+
+!jest.config.js
