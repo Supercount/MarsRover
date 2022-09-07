@@ -13,10 +13,13 @@ export class Rover {
   }
 
   processMovement(command: string): void {
-    if (command == "b") {
-      this.position.goBackwards();
-    } else {
-      this.position.goForward();
-    }
+    const orders = command.split("");
+    orders.forEach((order) => {
+      if (order == "b") {
+        this.position.goBackwards();
+      } else {
+        this.position.goForward();
+      }
+    });
   }
 }

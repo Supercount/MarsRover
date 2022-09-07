@@ -45,4 +45,22 @@ describe("Test the position of the rover", function () {
 
     expect(rover.displayPosition()).toEqual(position);
   });
+
+  it("Should go forward twice when receive command 'ff'", function () {
+    const rover = new Rover(0, 0);
+    rover.processMovement("ff");
+
+    const position = new Position(2, 0, Orientation.N);
+
+    expect(rover.displayPosition()).toEqual(position);
+  });
+
+  it("Should go forward and backwards when receive command 'ffbb'", function () {
+    const rover = new Rover(0, 0);
+    rover.processMovement("ffbb");
+
+    const position = new Position(0, 0, Orientation.N);
+
+    expect(rover.displayPosition()).toEqual(position);
+  });
 });
