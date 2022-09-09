@@ -48,4 +48,8 @@ export class Position {
         break;
     }
   }
+
+  turnRight(): void {
+    this.orientation = (this.orientation + 1) % 4;
+  }
 }

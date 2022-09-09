@@ -17,6 +17,8 @@ export class Rover {
     orders.forEach((order) => {
       if (order == "b") {
         this.position.goBackwards();
+      } else if (order == "r") {
+        this.position.turnRight();
       } else {
         this.position.goForward();
       }

@@ -1,6 +1,6 @@
 export enum Orientation {
   "N",
-  "W",
-  "S",
   "E",
+  "S",
+  "W",
 }

@@ -81,4 +81,13 @@ describe("Test the position of the rover", function () {
 
     expect(rover.displayPosition()).toEqual(position);
   });
+
+  it("Should turn right when receive command 'r'", function () {
+    const rover = new Rover(0, 0);
+    rover.processMovement("r");
+
+    const position = new Position(0, 0, Orientation.E);
+
+    expect(rover.displayPosition()).toEqual(position);
+  });
 });
