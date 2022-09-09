@@ -37,6 +37,24 @@ describe("Test the position of the rover", function () {
     expect(rover.displayPosition()).toEqual(position);
   });
 
+  it("Should go forward when receive command 'f' and not facing North", function () {
+    const rover = new Rover(0, 0, Orientation.E);
+    rover.processMovement("f");
+
+    const position = new Position(0, 1, Orientation.E);
+
+    expect(rover.displayPosition()).toEqual(position);
+  });
+
+  it("Should go forward when receive command 'b' and not facing North", function () {
+    const rover = new Rover(0, 0, Orientation.E);
+    rover.processMovement("b");
+
+    const position = new Position(0, -1, Orientation.E);
+
+    expect(rover.displayPosition()).toEqual(position);
+  });
+
   it("Should go backwards when receive command 'b'", function () {
     const rover = new Rover(0, 0);
     rover.processMovement("b");

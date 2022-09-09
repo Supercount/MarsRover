@@ -12,10 +12,40 @@ export class Position {
   }
 
   public goForward(): void {
-    this.x += 1;
+    switch (this.orientation) {
+      case Orientation.N:
+        this.x += 1;
+        break;
+      case Orientation.W:
+        this.y -= 1;
+        break;
+      case Orientation.S:
+        this.x -= 1;
+        break;
+      case Orientation.E:
+        this.y += 1;
+        break;
+      default:
+        break;
+    }
   }
 
   goBackwards(): void {
-    this.x -= 1;
+    switch (this.orientation) {
+      case Orientation.N:
+        this.x -= 1;
+        break;
+      case Orientation.W:
+        this.y += 1;
+        break;
+      case Orientation.S:
+        this.x += 1;
+        break;
+      case Orientation.E:
+        this.y -= 1;
+        break;
+      default:
+        break;
+    }
   }
 }
