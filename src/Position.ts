@@ -52,4 +52,8 @@ export class Position {
   turnRight(): void {
     this.orientation = (this.orientation + 1) % 4;
   }
+
+  turnLeft() {
+    this.orientation = (this.orientation + 3) % 4;
+  }
 }

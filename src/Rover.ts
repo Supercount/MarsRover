@@ -19,6 +19,8 @@ export class Rover {
         this.position.goBackwards();
       } else if (order == "r") {
         this.position.turnRight();
+      } else if (order == "l") {
+        this.position.turnLeft();
       } else {
         this.position.goForward();
       }
